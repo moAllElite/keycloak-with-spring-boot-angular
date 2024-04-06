@@ -1,0 +1,255 @@
+{
+  "authorities": [
+    {
+      "authority": "SCOPE_profile"
+    },
+    {
+      "authority": "SCOPE_email"
+    }
+  ],
+  "details": {
+    "remoteAddress": "127.0.0.1",
+    "sessionId": null
+  },
+  "authenticated": true,
+  "principal": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzWGxfQ3NNMEt4UlNtaUNERVNWUXdfeTBXcTZjWk5YTWprbFZqQ2ZsSXg0In0.eyJleHAiOjE3MTIyNTQ2NzAsImlhdCI6MTcxMjI1NDM3MCwianRpIjoiZThlNjAwM2UtMWU1My00MWU4LWFjN2ItODA1MzNlN2UzNmNkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9sZWFybi1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmY2QyOTNkMi1kNzQ4LTRmM2MtYTllMy02NjJhZTBmYjFlMjUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzY2hvb2wtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo0MjAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtbGVhcm4tcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIlVTRVIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJzY2hvb2wtYXBwIjp7InJvbGVzIjpbIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6InVzZXJfMiB1c2UiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMiIsImdpdmVuX25hbWUiOiJ1c2VyXzIiLCJmYW1pbHlfbmFtZSI6InVzZSIsImVtYWlsIjoidXNlckBnbWFpbC5jb20ifQ.AGaayGP93ePENVRvhbBcG-zacCEqalzlb1Ho0rtQ5e73RqQu6tFuQiXSUb-3Yp-FdhJOUciF_bpty4ddNG7XHrIkIMRRASIIX0LGMyhqb9TaAuL5uBvZmmDDCFUm8XyREMedN9K-s6itbkpSS66hZTv2JowxC_VHenKFcIj41XWfkxT47H7CxWaKZks4Ku919oOL3N5tL4s8Z_mT_lo1myhk_UJJdUDucWQjw6oPx6QlbwdU4hEfZs6y_MLBYyKW7K_gDyqSBmxf6vWd96UrXWUyEvo_4J0914SE5R1vWmMf3AW9ZeCrdKRtXtHdob6z3OmCC-WHXtLVte-_VL9JTA",
+    "issuedAt": "2024-04-04T18:12:50Z",
+    "expiresAt": "2024-04-04T18:17:50Z",
+    "headers": {
+      "kid": "3Xl_CsM0KxRSmiCDESVQw_y0Wq6cZNXMjklVjCflIx4",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+      "resource_access": {
+        "school-app": {
+          "roles": [
+            "USER"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "http://localhost:4200"
+      ],
+      "iss": "http://localhost:8080/realms/learn-realm",
+      "typ": "Bearer",
+      "preferred_username": "user2",
+      "given_name": "user_2",
+      "sid": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "aud": [
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-learn-realm",
+          "uma_authorization",
+          "USER"
+        ]
+      },
+      "azp": "school-app",
+      "scope": "profile email",
+      "name": "user_2 use",
+      "exp": "2024-04-04T18:17:50Z",
+      "session_state": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "iat": "2024-04-04T18:12:50Z",
+      "family_name": "use",
+      "jti": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+      "email": "user@gmail.com"
+    },
+    "id": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+    "notBefore": null,
+    "subject": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+    "issuer": "http://localhost:8080/realms/learn-realm",
+    "audience": [
+      "account"
+    ]
+  },
+  "credentials": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzWGxfQ3NNMEt4UlNtaUNERVNWUXdfeTBXcTZjWk5YTWprbFZqQ2ZsSXg0In0.eyJleHAiOjE3MTIyNTQ2NzAsImlhdCI6MTcxMjI1NDM3MCwianRpIjoiZThlNjAwM2UtMWU1My00MWU4LWFjN2ItODA1MzNlN2UzNmNkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9sZWFybi1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmY2QyOTNkMi1kNzQ4LTRmM2MtYTllMy02NjJhZTBmYjFlMjUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzY2hvb2wtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo0MjAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtbGVhcm4tcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIlVTRVIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJzY2hvb2wtYXBwIjp7InJvbGVzIjpbIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6InVzZXJfMiB1c2UiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMiIsImdpdmVuX25hbWUiOiJ1c2VyXzIiLCJmYW1pbHlfbmFtZSI6InVzZSIsImVtYWlsIjoidXNlckBnbWFpbC5jb20ifQ.AGaayGP93ePENVRvhbBcG-zacCEqalzlb1Ho0rtQ5e73RqQu6tFuQiXSUb-3Yp-FdhJOUciF_bpty4ddNG7XHrIkIMRRASIIX0LGMyhqb9TaAuL5uBvZmmDDCFUm8XyREMedN9K-s6itbkpSS66hZTv2JowxC_VHenKFcIj41XWfkxT47H7CxWaKZks4Ku919oOL3N5tL4s8Z_mT_lo1myhk_UJJdUDucWQjw6oPx6QlbwdU4hEfZs6y_MLBYyKW7K_gDyqSBmxf6vWd96UrXWUyEvo_4J0914SE5R1vWmMf3AW9ZeCrdKRtXtHdob6z3OmCC-WHXtLVte-_VL9JTA",
+    "issuedAt": "2024-04-04T18:12:50Z",
+    "expiresAt": "2024-04-04T18:17:50Z",
+    "headers": {
+      "kid": "3Xl_CsM0KxRSmiCDESVQw_y0Wq6cZNXMjklVjCflIx4",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+      "resource_access": {
+        "school-app": {
+          "roles": [
+            "USER"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "http://localhost:4200"
+      ],
+      "iss": "http://localhost:8080/realms/learn-realm",
+      "typ": "Bearer",
+      "preferred_username": "user2",
+      "given_name": "user_2",
+      "sid": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "aud": [
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-learn-realm",
+          "uma_authorization",
+          "USER"
+        ]
+      },
+      "azp": "school-app",
+      "scope": "profile email",
+      "name": "user_2 use",
+      "exp": "2024-04-04T18:17:50Z",
+      "session_state": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "iat": "2024-04-04T18:12:50Z",
+      "family_name": "use",
+      "jti": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+      "email": "user@gmail.com"
+    },
+    "id": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+    "notBefore": null,
+    "subject": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+    "issuer": "http://localhost:8080/realms/learn-realm",
+    "audience": [
+      "account"
+    ]
+  },
+  "token": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzWGxfQ3NNMEt4UlNtaUNERVNWUXdfeTBXcTZjWk5YTWprbFZqQ2ZsSXg0In0.eyJleHAiOjE3MTIyNTQ2NzAsImlhdCI6MTcxMjI1NDM3MCwianRpIjoiZThlNjAwM2UtMWU1My00MWU4LWFjN2ItODA1MzNlN2UzNmNkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9sZWFybi1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmY2QyOTNkMi1kNzQ4LTRmM2MtYTllMy02NjJhZTBmYjFlMjUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzY2hvb2wtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo0MjAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtbGVhcm4tcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIlVTRVIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJzY2hvb2wtYXBwIjp7InJvbGVzIjpbIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImU0ZTAxNGU4LWIzM2ItNDE0Yy04MmQxLThlYjExZGNlNTU2NyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6InVzZXJfMiB1c2UiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMiIsImdpdmVuX25hbWUiOiJ1c2VyXzIiLCJmYW1pbHlfbmFtZSI6InVzZSIsImVtYWlsIjoidXNlckBnbWFpbC5jb20ifQ.AGaayGP93ePENVRvhbBcG-zacCEqalzlb1Ho0rtQ5e73RqQu6tFuQiXSUb-3Yp-FdhJOUciF_bpty4ddNG7XHrIkIMRRASIIX0LGMyhqb9TaAuL5uBvZmmDDCFUm8XyREMedN9K-s6itbkpSS66hZTv2JowxC_VHenKFcIj41XWfkxT47H7CxWaKZks4Ku919oOL3N5tL4s8Z_mT_lo1myhk_UJJdUDucWQjw6oPx6QlbwdU4hEfZs6y_MLBYyKW7K_gDyqSBmxf6vWd96UrXWUyEvo_4J0914SE5R1vWmMf3AW9ZeCrdKRtXtHdob6z3OmCC-WHXtLVte-_VL9JTA",
+    "issuedAt": "2024-04-04T18:12:50Z",
+    "expiresAt": "2024-04-04T18:17:50Z",
+    "headers": {
+      "kid": "3Xl_CsM0KxRSmiCDESVQw_y0Wq6cZNXMjklVjCflIx4",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+      "resource_access": {
+        "school-app": {
+          "roles": [
+            "USER"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "http://localhost:4200"
+      ],
+      "iss": "http://localhost:8080/realms/learn-realm",
+      "typ": "Bearer",
+      "preferred_username": "user2",
+      "given_name": "user_2",
+      "sid": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "aud": [
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-learn-realm",
+          "uma_authorization",
+          "USER"
+        ]
+      },
+      "azp": "school-app",
+      "scope": "profile email",
+      "name": "user_2 use",
+      "exp": "2024-04-04T18:17:50Z",
+      "session_state": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+      "iat": "2024-04-04T18:12:50Z",
+      "family_name": "use",
+      "jti": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+      "email": "user@gmail.com"
+    },
+    "id": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+    "notBefore": null,
+    "subject": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+    "issuer": "http://localhost:8080/realms/learn-realm",
+    "audience": [
+      "account"
+    ]
+  },
+  "name": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+  "tokenAttributes": {
+    "sub": "fcd293d2-d748-4f3c-a9e3-662ae0fb1e25",
+    "resource_access": {
+      "school-app": {
+        "roles": [
+          "USER"
+        ]
+      },
+      "account": {
+        "roles": [
+          "manage-account",
+          "manage-account-links",
+          "view-profile"
+        ]
+      }
+    },
+    "email_verified": false,
+    "allowed-origins": [
+      "http://localhost:4200"
+    ],
+    "iss": "http://localhost:8080/realms/learn-realm",
+    "typ": "Bearer",
+    "preferred_username": "user2",
+    "given_name": "user_2",
+    "sid": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+    "aud": [
+      "account"
+    ],
+    "acr": "1",
+    "realm_access": {
+      "roles": [
+        "offline_access",
+        "default-roles-learn-realm",
+        "uma_authorization",
+        "USER"
+      ]
+    },
+    "azp": "school-app",
+    "scope": "profile email",
+    "name": "user_2 use",
+    "exp": "2024-04-04T18:17:50Z",
+    "session_state": "e4e014e8-b33b-414c-82d1-8eb11dce5567",
+    "iat": "2024-04-04T18:12:50Z",
+    "family_name": "use",
+    "jti": "e8e6003e-1e53-41e8-ac7b-80533e7e36cd",
+    "email": "user@gmail.com"
+  }
+}

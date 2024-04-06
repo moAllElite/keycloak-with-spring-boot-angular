@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: keycloak-spring-boot-3
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/school_db
+    username: postgres
+    password: passer@123
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/learn-realm
+          jwk-set-uri: http://localhost:8080/realms/learn-realm/protocol/openid-connect/certs
+
+
+
+
+
+
+
+
+
+server:
+  port: 8090
+  servlet:
+    context-path: /api

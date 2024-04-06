@@ -1,0 +1,12 @@
+com\groupeisi\keycloakspringboot3\controllers\SchooldController.class
+com\groupeisi\keycloakspringboot3\entities\School.class
+com\groupeisi\keycloakspringboot3\service\SchoolServiceImpl.class
+com\groupeisi\keycloakspringboot3\dto\SchoolDTO.class
+com\groupeisi\keycloakspringboot3\mapping\MapperImpl.class
+com\groupeisi\keycloakspringboot3\dto\SchoolDTO$SchoolDTOBuilder.class
+com\groupeisi\keycloakspringboot3\conifg\SecurityConfig.class
+com\groupeisi\keycloakspringboot3\mapping\IMapper.class
+com\groupeisi\keycloakspringboot3\entities\School$SchoolBuilder.class
+com\groupeisi\keycloakspringboot3\service\interfaces\ISchoolService.class
+com\groupeisi\keycloakspringboot3\KeycloakSpringBoot3Application.class
+com\groupeisi\keycloakspringboot3\repository\SchoolRepository.class
