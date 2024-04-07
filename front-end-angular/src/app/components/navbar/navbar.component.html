@@ -1,0 +1,37 @@
+<div class="d-flex flex-column justify-content-between min-vh-100">
+  <div class="bg-dark  p-2  text-white">
+    <h1 class="d-flex  mt-1   text-decoration-none align-items-center">
+          <span class="fs-4 d-none d-sm-inline flex-wrap">
+            Blackboard
+          <i class="bi bi-book-half"></i>
+          </span>
+    </h1>
+    @for ( item of items; track  items){
+      <ul class="nav nav-pills flex-column mt-4 ">
+        <li class="nav-item py-5  py-sm-0 ">
+          <a [routerLink]="item.link"
+             routerLinkActive="bg-danger"
+             class="mt-2 nav-link  text-white text-decoration-none mark">
+            <i class="{{item.icons}} icon  "  ></i>
+            <span class="fs-4 ms-3 d-none d-sm-inline">{{item.name}} </span>
+          </a>
+        </li>
+      </ul>
+    }
+
+  </div>
+  <div class="dropup-center dropup p-3">
+    <button class="btn toogle border-none text-white dropdown-toggle" type="button" id="triggerId"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+      <i class="bi bi-person-fill"></i> <span class="ms-2">[USER]</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="triggerId">
+      <button class="dropdown-item text-center" >
+        <i class="bi bi-door-open"></i>
+        Logout
+      </button>
+    </div>
+  </div>
+
+</div>
