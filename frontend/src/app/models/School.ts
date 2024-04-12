@@ -1,5 +1,12 @@
-export interface School {
-  id: number;
-  name: string;
-  email: string;
+export class School {
+  id?: number;
+  name?: string;
+  email?: string;
+
+
+  constructor(id: number, name: string, email: string) {
+    this.id = id;
+    this.name = name;
+    this.email = email;
+  }
 }

@@ -231,3 +231,9 @@ Q.idea/sonarlint/securityhotspotstore/2/7/2701071a1490f4576d914b0b84bc3185e0aa28
 Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,9/0/909762385fc6eb20f922a91c6865741308b57f2c
 w
 G.idea/sonarlint/issuestore/6/5/652e4713263d9cb68cfafc818ea01443781a72a8,4/b/4b020bc4b95b32da122474d51ac1498fffc063dd
+q
+Afrontend/src/app/components/school-list/school-list.component.css,6/b/6becbbc05e124eed3b395ae3ed9fe7da0d52b1c5
+x
+Hfrontend/src/app/components/school-details/school-details.component.html,1/0/10555fe73e109d5e5cc7c2d61ae3e59a0c09ffef
+v
+Ffrontend/src/app/components/school-details/school-details.component.ts,a/9/a93225be66ecfed855a45f64eee8b0bf6bf330e1
