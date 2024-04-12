@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="back-end" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <envs>
+      <env name="run" value="su -s ${USER}" />
+    </envs>
+    <module name="keycloak-spring-boot-3" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.groupeisi.keycloakspringboot3.KeycloakSpringBoot3Application" />
+    <method v="2" />
+  </configuration>
+</component>
