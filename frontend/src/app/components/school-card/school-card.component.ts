@@ -13,7 +13,7 @@ export class SchoolCardComponent {
   today: number = Date.now();
   constructor( private router: Router) {
   }
-  onShowDetails(id: number) {
-    this.router.navigate(['school-details',id]).then();
+  onShowDetails(id: any) {
+    this.router.navigateByUrl(`schools/${id}`).then();
   }
 }

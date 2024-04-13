@@ -17,7 +17,7 @@ public class KeycloakSpringBoot3Application {
     }
     @Bean
     CommandLineRunner commandLineRunner(SchoolRepository schoolRepository) {
-        return args-> Stream.of("Libasse Niang","Savoir plus","ma awa déme")
+        return args-> Stream.of("Libasse Niang","Savoir plus","ma awa déme","mamadou sagna","abdoulaye badji")
                 .forEach(
                     name->    schoolRepository.save( new School(null,name,"contact@"+name+".com"))
                 );

@@ -3,25 +3,27 @@
     Featured
   </div>
   <div class="card-body" >
-    <h5 class="card-title">{{school()?.id }}</h5>
-    <p class="card-text">{{ school()?.name | titlecase }}</p>
-    <p class="card-text">{{ school()?.email }}</p>
-    <p class="card-text">{{ }}</p>
+    @if(school$ | async; as school){
+      <h5 class="card-title">{{school?.id }}</h5>
+      <p class="card-text">{{ school?.name | titlecase }}</p>
+      <p class="card-text">{{ school?.email }}</p>
+      <p class="card-text"></p>
 
+      <div class="buttons">
+        <!-- Button trigger delete modal -->
+        <button class="btn btn-outline-danger"  type="button" (click)="onDeleteSchool(school.id)"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="bi bi-trash2"></i>
+          Delete
+        </button>
+        <!-- Button trigger update modal -->
+        <button class="btn btn-outline-dark"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate">
+          <i class="bi bi-pen-fill"></i>
+          Update
+        </button>
+      </div>
+    }
 
-    <div class="buttons">
-      <!-- Button trigger delete modal -->
-      <button class="btn btn-outline-danger" (click)="onDelete(school()?.id)" type="button"
-              data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class="bi bi-trash2"></i>
-        Delete
-      </button>
-      <!-- Button trigger update modal -->
-      <button class="btn btn-outline-dark" (click)="onUpdate(school()?.id)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate">
-        <i class="bi bi-pen-fill"></i>
-        Update
-      </button>
-    </div>
   </div>
   <div class="card-footer text-body-secondary">
   </div>

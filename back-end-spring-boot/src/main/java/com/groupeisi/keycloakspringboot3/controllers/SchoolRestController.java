@@ -40,5 +40,9 @@ public class SchoolRestController {
         schoolService.update(id, schoolDTO);
         return ResponseEntity.noContent().build();
     }
-
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){
+        schoolService.deleteSchoolById(id);
+    }
 }

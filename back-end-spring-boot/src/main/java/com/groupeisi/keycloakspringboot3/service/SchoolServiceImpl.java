@@ -5,6 +5,7 @@ import com.groupeisi.keycloakspringboot3.entities.School;
 import com.groupeisi.keycloakspringboot3.mapper.ISchoolMapper;
 import com.groupeisi.keycloakspringboot3.repository.SchoolRepository;
 import com.groupeisi.keycloakspringboot3.service.interfaces.ISchoolService;
+import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.cache.annotation.CacheConfig;
@@ -38,9 +39,13 @@ public class SchoolServiceImpl implements ISchoolService {
 
     @Transactional
     @Override
-    public SchoolDTO save(SchoolDTO schoolDTO) {
+    public void save(SchoolDTO schoolDTO) {
         School school = mapper.toEntity(schoolDTO);
-        return  mapper.toDTO(schoolRepository.save(school));
+        boolean  schoolExistsById = schoolRepository.existsById(school.getId());
+        if (schoolExistsById) {
+            throw new EntityExistsException(String.format("School with id %s  already exists",school.getId() ));
+        }
+        mapper.toDTO(schoolRepository.save(school));
     }
 
     @Cacheable(key = "#name")
@@ -56,11 +61,20 @@ public class SchoolServiceImpl implements ISchoolService {
     public   SchoolDTO update(Long id, SchoolDTO schoolDTO){
         boolean existsById = schoolRepository.existsById(id);
         if(!existsById){
-            return null;
+           throw new EntityNotFoundException("No school was found with provided ID:"+id);
         }
         School school = mapper.toEntity(schoolDTO);
         return  mapper.toDTO(
                 schoolRepository.save(school)
         );
+    }
+
+    @Override
+    public void deleteSchoolById(Long id) {
+        boolean existsById = schoolRepository.existsById(id);
+        if(!existsById){
+            throw new EntityNotFoundException("No school was found with provided ID:"+id);
+        }
+        schoolRepository.deleteById(id);
     }
 }

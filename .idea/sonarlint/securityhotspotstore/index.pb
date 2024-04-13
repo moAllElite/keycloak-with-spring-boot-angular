@@ -28,11 +28,11 @@ eback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/repository
 é
 ^back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/mapper/ISchoolMapper.java,b\c\bc42139f4568cc44a31ebcbb6b284911a32a0bc6
 ì
-cback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/SchoolServiceImpl.java,d\3\d3c8b8ee1ddcd557e9e034c043472d1ddcfae109
+cback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/SchoolServiceImpl.java,d/3/d3c8b8ee1ddcd557e9e034c043472d1ddcfae109
 û
 nback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/controllers/AuthenticationController.java,c\3\c37d290d1022286909817dda028f2d0a8502a6e6
 õ
-kback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/interfaces/ISchoolService.java,c\c\cc8f7f9da9492793dec484336e746a7887765665
+kback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/interfaces/ISchoolService.java,c/c/cc8f7f9da9492793dec484336e746a7887765665
 Å
 Q.idea/sonarlint/securityhotspotstore/a/6/a6cc9046f889f7272c89d5a2f5a22a5ad14c2ffa,7\0\70316a06bef622371b2818304c58a9139e30a0af
 Å
@@ -298,3 +298,11 @@ Efrontend/src/app/components/school-card/school-card.component.spec.ts,4/1/4102
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+ë
+aback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/ApiException.java,b/a/baf5b760f0b95c0843eb6b3ab20c34375b6f8cbe
+î
+dback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/HandleException.java,5/0/50dc5b4f516f046adc8f7b9ef4f61e52918ae26d
+é
+^back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/Exception.java,c/8/c8cf6da648ad3344d2b7d7c75af5023336dabb4e
+ç
+]back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/ApiError.java,6/5/659d4dbe9ffda211279da3fabe3b973098b3813b

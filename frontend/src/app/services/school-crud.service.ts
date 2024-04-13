@@ -15,4 +15,12 @@ export class SchoolCrudService {
       `${this.Host}api/schools`,
     );
   }
+
+  getSChoolById(id:number):Observable<School>{
+    return  this.http.get<School>(`${this.Host}api/schools/find-by?id=${id}`,)
+  }
+
+  deleteById(id: number | undefined):void {
+    this.http.delete(`${this.Host}api/schools/${id}`)
+  }
 }

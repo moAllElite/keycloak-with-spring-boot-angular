@@ -10,13 +10,12 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {
     path:'schools',
-  //  component:SchoolListComponent,
     canActivate:[AuthGuard],
     data:{roles:['USER']},
     children:[
       {path:'',redirectTo:'all',pathMatch:'full'},
       {path:'all',component:SchoolListComponent},
-      {path:'schools/:id',component:SchoolDetailsComponent},
+      {path:':id',component:SchoolDetailsComponent},
     ]
   },
 ];
