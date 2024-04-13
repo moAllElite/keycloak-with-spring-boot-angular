@@ -1,13 +1,8 @@
 <div
-    class=" d-flex   flex-wrap content  "
-    [class]="schools().length % 2 == 0||
-    schools().length==1 ||
-    schools().length % 5 == 0 ||
-    schools().length % 3 == 0?
-     'justify-content-start':'justify-content-center' "
+    class="container d-flex content flex-wrap w-70"
 >
     @for (school of schools() ;track school){
-      <app-school-card class="col"  [school]="school"  ></app-school-card>
+      <app-school-card  [school]="school"  ></app-school-card>
 
     }
   </div>

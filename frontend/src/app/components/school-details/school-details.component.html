@@ -1,4 +1,9 @@
-<div class="card text-center">
+
+<app-modal
+           [message]="infoMessage()"
+></app-modal>
+
+<div class="card text-center align-items-center justify-content-center">
   <div class="card-header">
     Featured
   </div>
@@ -9,10 +14,10 @@
       <p class="card-text">{{ school?.email }}</p>
       <p class="card-text"></p>
 
-      <div class="buttons">
+      <div class="buttons" *ngIf="roles.includes('ADMIN')">
         <!-- Button trigger delete modal -->
-        <button class="btn btn-outline-danger"  type="button" (click)="onDeleteSchool(school.id)"
-                data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button class="btn btn-outline-danger"  type="button"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onDeleteSchool(school?.id)">
           <i class="bi bi-trash2"></i>
           Delete
         </button>

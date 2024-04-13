@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Component, OnInit, signal} from '@angular/core';
+import {ActivatedRoute,  Router} from "@angular/router";
 import {SchoolCrudService} from "../../services/school-crud.service";
 import { Observable} from "rxjs";
 import {School} from "../../models/School";
+import {KeycloakService} from "keycloak-angular";
 
 @Component({
   selector: 'app-school-details',
@@ -11,18 +12,28 @@ import {School} from "../../models/School";
 })
 export class SchoolDetailsComponent implements OnInit{
   id!:number;
+  roles!:any;
   school$!:Observable<School>;
-  constructor(private route: ActivatedRoute,readonly router:Router,readonly schoolCrudService:SchoolCrudService) {
+  infoMessage = signal<string>('');
+  constructor(private route: ActivatedRoute,
+              protected keycloakService:KeycloakService
+              ,readonly router:Router,
+              private schoolCrudService:SchoolCrudService) {
     this.id =  this.route.snapshot.params['id'];
     console.log(this.id);
+    this.roles = this.keycloakService.getUserRoles();
+
   }
 
   ngOnInit(): void {
     this.school$ = this.schoolCrudService.getSChoolById(this.id);
+
   }
 
 
-  onDeleteSchool(id: number | undefined) {
+  onDeleteSchool(id?: number) :void{
     this.schoolCrudService.deleteById(id);
+    this.infoMessage.set('Deleted successfully.');
   }
+
 }

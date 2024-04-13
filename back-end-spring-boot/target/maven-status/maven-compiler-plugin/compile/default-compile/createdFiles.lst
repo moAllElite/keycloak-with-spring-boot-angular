@@ -7,8 +7,11 @@ com/groupeisi/keycloakspringboot3/entities/School$SchoolBuilder.class
 com/groupeisi/keycloakspringboot3/dto/SchoolDTO.class
 com/groupeisi/keycloakspringboot3/KeycloakSpringBoot3Application.class
 com/groupeisi/keycloakspringboot3/controllers/AuthenticationController.class
+com/groupeisi/keycloakspringboot3/exceptions/ApiError$ApiErrorBuilder.class
 com/groupeisi/keycloakspringboot3/service/interfaces/ISchoolService.class
+com/groupeisi/keycloakspringboot3/exceptions/ApiError.class
 com/groupeisi/keycloakspringboot3/repository/SchoolRepository.class
+com/groupeisi/keycloakspringboot3/exceptions/HandleException.class
 com/groupeisi/keycloakspringboot3/security/JwtAuthConverter.class
 com/groupeisi/keycloakspringboot3/service/SchoolServiceImpl.class
 com/groupeisi/keycloakspringboot3/security/SecurityConfig.class

@@ -2,7 +2,7 @@
 M
 back-end-spring-boot/mvnw.cmd,a\6\a6cc9046f889f7272c89d5a2f5a22a5ad14c2ffa
 ‡
-Wback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/dto/SchoolDTO.java,a\d\ad14274b0d6b41fee42a09625a20685c24f68241
+Wback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/dto/SchoolDTO.java,a/d/ad14274b0d6b41fee42a09625a20685c24f68241
 I
 back-end-spring-boot/mvnw,8\7\872c0932ee283c186798e40d9a3a5f7252987e85
 ˜
@@ -18,19 +18,19 @@ aback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/security/S
 
 mback-end-spring-boot/src/test/java/com/groupeisi/keycloakspringboot3/KeycloakSpringBoot3ApplicationTests.java,b\4\b42eee4dee52cf65c13415c0fe504875a0e41039
 ‘
-aback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/mapper/SchoolMapperImpl.java,5\e\5ebf67ac5743dc1ba209c8423e09db5531c872de
+aback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/mapper/SchoolMapperImpl.java,5/e/5ebf67ac5743dc1ba209c8423e09db5531c872de
 š
 jback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/controllers/SchoolRestController.java,4/4/44c33977fca9aca53bd8128c5f21ded7c4ca854b
 L
 back-end-spring-boot/pom.xml,1/7/17757897c83b077415125aa3620df8985325845a
 •
-eback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/repository/SchoolRepository.java,5\8\58e3fbff6c28ef4d35dc5ba98e9c9734a74de7b4
+eback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/repository/SchoolRepository.java,5/8/58e3fbff6c28ef4d35dc5ba98e9c9734a74de7b4
 Ž
 ^back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/mapper/ISchoolMapper.java,b\c\bc42139f4568cc44a31ebcbb6b284911a32a0bc6
 “
 cback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/SchoolServiceImpl.java,d/3/d3c8b8ee1ddcd557e9e034c043472d1ddcfae109
 ž
-nback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/controllers/AuthenticationController.java,c\3\c37d290d1022286909817dda028f2d0a8502a6e6
+nback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/controllers/AuthenticationController.java,c/3/c37d290d1022286909817dda028f2d0a8502a6e6
 ›
 kback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/service/interfaces/ISchoolService.java,c/c/cc8f7f9da9492793dec484336e746a7887765665
 
@@ -298,11 +298,21 @@ Efrontend/src/app/components/school-card/school-card.component.spec.ts,4/1/4102
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-‘
-aback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/ApiException.java,b/a/baf5b760f0b95c0843eb6b3ab20c34375b6f8cbe
 ”
 dback-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/HandleException.java,5/0/50dc5b4f516f046adc8f7b9ef4f61e52918ae26d
-Ž
-^back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/Exception.java,c/8/c8cf6da648ad3344d2b7d7c75af5023336dabb4e
 
 ]back-end-spring-boot/src/main/java/com/groupeisi/keycloakspringboot3/exceptions/ApiError.java,6/5/659d4dbe9ffda211279da3fabe3b973098b3813b
+f
+6frontend/src/app/components/modal/modal.component.html,3/b/3ba6bbda3b734a4cfa72fb55ed6061109e823e84
+d
+4frontend/src/app/components/modal/modal.component.ts,2/3/23e8eee91a9034f29e89e43bf60e278c94f5ea3a
+p
+@frontend/src/app/components/new-school/new-school.component.html,f/1/f193c7873a6ef0292e91bbe8bc97d0fd7be2f21e
+n
+>frontend/src/app/components/new-school/new-school.component.ts,b/a/bab5c4fb95a4cd605eec4351baf4be0984a3b9c0
+o
+?frontend/src/app/components/new-school/new-school.component.css,c/e/cefe45dfe0ba89ffb506540c9f1ee7035e85d9fa
+f
+6frontend/src/app/components/alert/alert.component.html,6/9/69c73992c460c5e8285cbc9c6f8d8e9d084ddc18
+d
+4frontend/src/app/components/alert/alert.component.ts,d/d/dd786c53efd72ec9c650f596c4f93994815e128e

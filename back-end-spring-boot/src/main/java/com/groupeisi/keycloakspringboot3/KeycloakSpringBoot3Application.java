@@ -19,7 +19,8 @@ public class KeycloakSpringBoot3Application {
     CommandLineRunner commandLineRunner(SchoolRepository schoolRepository) {
         return args-> Stream.of("Libasse Niang","Savoir plus","ma awa déme","mamadou sagna","abdoulaye badji")
                 .forEach(
-                    name->    schoolRepository.save( new School(null,name,"contact@"+name+".com"))
+                    name->    schoolRepository.save( new School(null,name,"contact@"+String.join("\t",name.toLowerCase())
+                            +".com"))
                 );
     }
 }

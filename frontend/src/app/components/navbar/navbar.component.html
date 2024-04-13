@@ -10,13 +10,26 @@
         <ul class="nav nav-pills flex-column mt-4 " *ngFor="let  item of items">
           <li class="nav-item py-5  py-sm-0 ">
             <a [routerLink]="item.navUrlLink"
-               routerLinkActive="bg-danger"
+               routerLinkActive="actived"
                class="mt-2 nav-link  text-white text-decoration-none mark" (click)="show(item.navUrlLink)">
               <i class="{{item.icons}} icon  "  ></i>
               <span class="fs-4 ms-3 d-none d-sm-inline">{{item.name}} </span>
             </a>
           </li>
         </ul>
+      @if(keycloakService.getUserRoles().includes('ADMIN')){
+        <ul class="nav nav-pills flex-column mt-4 " *ngFor="let  item of adminActions">
+          <li class="nav-item py-5  py-sm-0 ">
+            <a [routerLink]="item.navUrlLink"
+               routerLinkActive="actived"
+               class="mt-2 nav-link  text-white text-decoration-none mark" (click)="show(item.navUrlLink)">
+              <i class="{{item.icons}} icon  "  ></i>
+              <span class="fs-4 ms-3 d-none d-sm-inline">{{item.name}} </span>
+            </a>
+          </li>
+        </ul>
+      }
+
 
 
     </div>
@@ -28,10 +41,17 @@
         <span class="ms-2">{{profiles?.username}}</span>
       </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
-        <button class="dropdown-item text-center" (click)="onLogout()">
-          <i class="bi bi-door-open"></i>
-          Logout
-        </button>
+        @if(profiles?.username!=null){
+          <button class="item dropdown-item  text-center" (click)="onLogout()">
+            <i class="bi bi-door-open"></i>
+            Logout
+          </button>
+        }@else{
+          <button class="dropdown-item  text-center" (click)="onLogin()">
+            <i class="bi bi-arrow-right-circle" style="font-size: 1.5rem"></i>
+            Login
+          </button>
+        }
       </div>
     </div>
 

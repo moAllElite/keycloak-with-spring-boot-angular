@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component,  OnInit} from '@angular/core';
 import { Router} from '@angular/router';
 import {KeycloakService} from "keycloak-angular";
 import {KeycloakProfile} from "keycloak-js";
@@ -13,6 +13,9 @@ export class NavbarComponent implements OnInit{
     {name:'Home',navUrlLink:'home',icons:'bi bi-house'},
     {name:'Schools',navUrlLink: 'schools',icons: 'bi bi-backpack2-fill'},
   ];
+  adminActions:any=[
+    {name: 'New school',navUrlLink: 'admin',icons: 'bi bi-plus-circle'},
+  ];
 
   profiles:KeycloakProfile| null = null;
   constructor(protected keycloakService:KeycloakService ,private router:Router) {
@@ -22,8 +25,11 @@ export class NavbarComponent implements OnInit{
     const isAuthenticated = this.keycloakService.isLoggedIn();
     if(isAuthenticated){
       this.keycloakService.loadUserProfile().then(
-        profile=> this.profiles  = profile
-      )
+        profile=> {
+          this.profiles = profile;
+        }
+
+      );
     }else {
       console.log("NOT logged in");
     }
@@ -36,5 +42,9 @@ export class NavbarComponent implements OnInit{
 
   show(url:string) {
     this.router.navigate([url]);
+  }
+
+  onLogin() {
+    this.keycloakService.login();
   }
 }

@@ -1,10 +1,10 @@
-<div class="container-fluid">
-  <div class="card bg-black text-white" >
+
+<div class="card  text-white" >
     <h5 class="card-header">Name</h5>
     <div class="card-body">
       <p>{{school().name| titlecase}}</p>
       <p class="card-text">created at:  {{today| date : 'dd-MM-yyyy'}}</p>
-      <button class="btn btn-danger" (click)="onShowDetails(school().id) "  >Details</button>
+      <button class="btn btn-outline-dark" (click)="onShowDetails(school().id) "  >Details</button>
     </div>
   </div>
-</div>
+

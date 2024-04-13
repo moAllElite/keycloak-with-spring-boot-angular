@@ -41,9 +41,10 @@ public class SchoolServiceImpl implements ISchoolService {
     @Override
     public void save(SchoolDTO schoolDTO) {
         School school = mapper.toEntity(schoolDTO);
-        boolean  schoolExistsById = schoolRepository.existsById(school.getId());
-        if (schoolExistsById) {
-            throw new EntityExistsException(String.format("School with id %s  already exists",school.getId() ));
+        School   schoolExistsByEmail= schoolRepository.findByEmail(school.getEmail())
+                .orElse(null);
+        if (schoolExistsByEmail != null) {
+            throw new EntityExistsException(String.format("School with email %s  already exists",school.getEmail() ));
         }
         mapper.toDTO(schoolRepository.save(school));
     }
@@ -59,11 +60,12 @@ public class SchoolServiceImpl implements ISchoolService {
     @CachePut( key = "#name")
     @Override
     public   SchoolDTO update(Long id, SchoolDTO schoolDTO){
-        boolean existsById = schoolRepository.existsById(id);
-        if(!existsById){
+        if(!schoolRepository.existsById(id)){
            throw new EntityNotFoundException("No school was found with provided ID:"+id);
         }
+
         School school = mapper.toEntity(schoolDTO);
+        school.setId(id);
         return  mapper.toDTO(
                 schoolRepository.save(school)
         );

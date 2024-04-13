@@ -10,6 +10,10 @@ import { SchoolCardComponent } from './components/school-card/school-card.compon
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 import { KeycloakService } from 'keycloak-angular';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ModalComponent } from './components/modal/modal.component';
+import { NewSchoolComponent } from './components/new-school/new-school.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AlertComponent } from './components/alert/alert.component';
 function initializeKeycloak(keycloak: KeycloakService) {
   return  async () =>
     await keycloak.init({
@@ -33,11 +37,16 @@ function initializeKeycloak(keycloak: KeycloakService) {
     HomeComponent,
     SchoolListComponent,
     SchoolCardComponent,
-    SchoolDetailsComponent
+    SchoolDetailsComponent,
+    ModalComponent,
+    NewSchoolComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideHttpClient(withFetch(),),
