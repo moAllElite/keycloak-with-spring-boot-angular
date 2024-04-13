@@ -1,0 +1,13 @@
+.card{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items:center;
+  margin:10% 0  0 32%;
+  width: 500px;
+}
+.buttons{
+  display: flex;
+  gap: 1.5em 2em;
+}

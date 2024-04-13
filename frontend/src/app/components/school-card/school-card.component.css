@@ -1,0 +1,12 @@
+.card{
+  max-width: 900px;
+  max-height: 310px;
+  line-height: 2.5rem;
+  margin: 0 ;
+}
+.card-body{
+  text-align: center;
+}
+.card-text{
+  font-weight: bold;
+}
