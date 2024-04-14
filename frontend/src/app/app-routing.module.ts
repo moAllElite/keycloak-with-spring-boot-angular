@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path:'schools',
     canActivate:[AuthGuard],
-    data:{roles:['USER']},
+    data:{roles:['default-roles-learn-realm']},
     children:[
       {
         path: '',redirectTo: 'all',pathMatch:'full'
