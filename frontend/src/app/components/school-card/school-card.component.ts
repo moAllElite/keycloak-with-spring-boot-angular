@@ -9,7 +9,7 @@ import { Router} from "@angular/router";
   styleUrl: './school-card.component.css'
 })
 export class SchoolCardComponent {
-  school:InputSignal<School>=input();
+  school:InputSignal<School | undefined>=input();
   today: number = Date.now();
   constructor( private router: Router) {
   }

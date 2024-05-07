@@ -1,4 +1,5 @@
-version: "3.1"
+version: "3.8"
+
 services:
   keycloak:
     container_name: keycloak
@@ -25,7 +26,6 @@ services:
     networks:
       - postgres
     restart: always
-
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -41,35 +41,62 @@ services:
       - postgres
     restart: unless-stopped
 
-#  back-end:
-#    image: mouhamedniang/keycloak-spring-boot-3:0.0.1-SNAPSHOT
-#    container_name: keycloak-spring-boot-3
-#    ports:
-#      - 8889:8889
-#    restart: unless-stopped
-#    environment:
-#      spring.datasource.url: jdbc:postgresql://localhost:5432/school_db?allowPublicKeyRetrieval=true&autoReconnect=true&useSSL=false
-#      spring.datasource.username: postgres
-#      spring.datasource.password: passer@123
-#      JAVA_TOOL_OPTIONS: -Xss256K -XX:ReservedCodeCacheSize=64MXX:MaxMetaspaceSize=128M -Xmx64M
-#    depends_on:
-#      - postgres
-#    links:
-#      - postgres
-#    profile:
- #     -all
-
-  redis:
-    image: redis:7.2.3-alpine
-    container_name: school-redis
+  Elasticsearch:
+    image: elasticsearch:7.16.2
+    container_name: elasticsearch
+    restart: always
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node
     ports:
-      - "6379:6379"
+      - '9200:9200'
+      - '9300:9300'
+    networks:
+      - elk
 
+  Logstash:
+    image: logstash:7.16.2
+    container_name: logstash
+    restart: always
+    volumes:
+      - ./logstash/:/logstash_dir
+    command: logstash -f /logstash_dir/logstash.conf
+    depends_on:
+      - Elasticsearch
+    ports:
+      - '9600:9600'
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
 
-networks:
-  postgres:
-    driver: bridge
-
+  Kibana:
+    image: kibana:7.16.2
+    container_name: kibana
+    restart: always
+    ports:
+      - '5601:5601'
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - Elasticsearch
+    networks:
+      - elk
 volumes:
   postgres:
+    driver: local
   pgadmin:
+    driver: local
+  elastic_data: {}
+
+networks:
+  pgadmin:
+    driver: bridge
+  postgres:
+    driver: bridge
+  elk:
+    driver: bridge
+
+
